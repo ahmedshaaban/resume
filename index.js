@@ -13,7 +13,7 @@ var Terminal =
     var cmdLine_ = document.querySelector(cmdLineContainer);
     var output_ = document.querySelector(outputContainer);
 
-    const CMDS_ = ["clear", "clock", "date", "echo", "help", "uname", "whoami"];
+    const CMDS_ = ["clear", "clock", "date", "echo", "help", "uname", "whoami", "projects"];
 
     var fs_ = null;
     var cwd_ = null;
@@ -153,6 +153,42 @@ var Terminal =
             );
             output(
               'Or you can view my resume from <a href="https://drive.google.com/open?id=1vYIXiQq647fRsXiBBdC08kkaGBA-mHR_" target="_blank">here</a>'
+            );
+            break;
+          case "projects":
+            output(
+              "<h2>Delivery Hero - Fluid Platform</h2> \
+              <p> Server-Driven-UI solution helping teams to customise customer experience flexibly in \
+              real-time, improving the time-to-market by removing the dependency on the app release \
+              cycle, creating configuration management portal to allow product team and stakeholders to \
+              perform changes with low dependency on engineering, providing Backend contains the logic \
+              to control the end-to-end experience on the clients. Making modifications and additions \
+              a lot less costly </p>"
+            );
+            output(
+              "<h2>Delivery Hero - Geolocator Service</h2> \
+              <p> I was a part of the team who was responsible for building the backend of geo-location service \
+              enabling more than 300 million Delivery Hero customers around the world, making sure that \
+              the service was scalable and robust enough to handle more than 5 million requests per 1 hour \
+              by adding the correct monitoring and alerting for service and making sure that the service \
+              can handle more than 10x production requests load. </p>"
+            );
+            output(
+              "<h2>Instabug - Users Service</h2> \
+              <p> I was responsible for migrating 1.5 billion users to a new database with a new partitioned \
+              database cluster hosted by AWS with zero downtime by using double writes concept, \
+              caching mechanism using Redis, kubernetes pods, and optimising the already implemented \
+              Ruby worker with Go workers. the sum of the previous factors achieved faster database \
+              querying and lowering the cost of the database cluster compared to the old database. </p>"
+            );
+            output(
+              "<h2>Extreme Solution - Reach-VoD</h2> \
+              <p> Video on Demand platform using mediadrop ’open source video platform’ as a CMS integrated \
+              with in house trans-coder app engine and google cloud storage. I was responsible for improving \
+              the CMS to match the requirements of the project, building the in house transcoder using  mpeg \
+              then containerizing this function in an App Engine and fnally implementing Google’s \
+              PubSub in the CMS, Transcoder App Engine and Google Storage. Technologies used: \
+              GCS, Pylons, Pubsub, fmpeg, NodeJS, Postgres and Docker. </p>"
             );
             break;
           default:
